@@ -9,3 +9,5 @@ resolvers += "Typesafe Repository" at "http://repo.typesafe.com/typesafe/release
 libraryDependencies += "com.typesafe.akka" %% "akka-actor" % "2.2.0"
 
 libraryDependencies += "org.scalaj" %% "scalaj-http" % "0.3.10"
+
+mainClass := Some("Actor_6_0")

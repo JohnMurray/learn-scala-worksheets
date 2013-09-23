@@ -1,9 +1,8 @@
-package akka
 
 import akka.actor.{Props, ActorSystem, Actor}
 
 
-class Actor_6_0 extends App {
+object Actor_6_0 {
 
   object HelloActor {
     case object Greet
@@ -11,12 +10,17 @@ class Actor_6_0 extends App {
 
   class HelloActor extends Actor {
     def receive = {
-      case HelloActor.Greet => println("hello world")
+      case HelloActor.Greet => {
+        println("hello world")
+        context.system.shutdown()
+      }
     }
   }
 
 
-  val system = ActorSystem("HelloSystem")
-  val greeter = system.actorOf(Props[HelloActor])
-  greeter ! HelloActor.Greet
+  def main(args: Array[String]) = {
+    val system = ActorSystem("HelloSystem")
+    val greeter = system.actorOf(Props[HelloActor])
+    greeter ! HelloActor.Greet
+  }
 }
