@@ -2,6 +2,11 @@
 import akka.actor.{Props, ActorSystem, Actor}
 
 
+/*
+ * A few things to notice:
+ *   - case objects
+ *   - actor system
+ */
 object Actor_6_0 {
 
   object HelloActor {
