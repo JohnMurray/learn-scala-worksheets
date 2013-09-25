@@ -3,6 +3,11 @@ object _0_1_Basics {
    * Null/Nil/Empty Values
    */
   val emptyList = Nil
+  val bigListOfNothing : List[Nothing] = List()
+
+  // checkout implementation
+  // scala.collection.immutable.Nil
+
   def doNothing() : Unit = { }
 
   /*
@@ -20,11 +25,12 @@ object _0_1_Basics {
       None
     }
   }
-
   for (i <- Range(0, 5)) {
     maybeReturnInteger() match {
       case Some(x) => println(x)
       case None => println("nothing")
     }
   }
+
+
 }
