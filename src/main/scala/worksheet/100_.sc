@@ -4,7 +4,7 @@
  *   - Functional programming, at the core of Scala
  *   - Rich standard library/collections
  *   - Bounded Generics
- *   - Covariance and Contravariance
+ *   - Variance Operators
  *   - Remote Actors
  *   - Currying
  *   - SBT (Simple Build Tool)

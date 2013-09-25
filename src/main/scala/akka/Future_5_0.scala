@@ -4,10 +4,9 @@
  *   - Requires execution context
  *   - Run in console (not in worksheet)
  */
-object _5_0_Future {
+object Future_5_0 {
   import scala.concurrent._
   import scala.concurrent.ExecutionContext.Implicits.global
-  import scala.util.Success
   import scala.compat.Platform
   import scalaj.http.Http
 
@@ -23,5 +22,9 @@ object _5_0_Future {
     yahoo onComplete(res => println("done with yahoo in %dms".format(Platform.currentTime - startTime)))
 
     println("done with method in %dms".format(Platform.currentTime - startTime))
+  }
+
+  def main(args: Array[String]) = {
+    race()
   }
 }
