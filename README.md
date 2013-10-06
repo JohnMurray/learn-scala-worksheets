@@ -46,5 +46,25 @@ Once you open up your project, you should be able to open a worksheet (eg.
 `src/main/scala/worksheet/0_0_Basics.sc`) and click the green play button directly
 above the file-window (not the same as the play/run button for the project).
 
+## Running the Future / Akka Examples
+
+If you make it to the end of the worksheets, you'll notice that there is a
+seperate directory containing examples of Scala Futures and Akka Actors. These
+cannot (or more likely should not) be run within the context of the worksheets.
+That being said, you can easily run these by using the `run` command in the root
+directory (`./run`) or by entering the sbt console and issuing the `run` command:
+
+    $learn-scala-worksheets $> sbt
+    
+    # starting sbt console . . . 
+    sbt > run
+
+Using the `run` script in the root directory will invoke SBT which has a pretty
+decent start-up-time. To avoid that, you are better off using the `sbt` command
+to enter into the interactive console. Note that when you are in the interactive
+console, you don't need to issue any type of recompile command as SBT will already
+see that files have changed and re-compile when you type `run`.
+
+
 
   [1]: http://www.jetbrains.com/idea/free_java_ide.html
