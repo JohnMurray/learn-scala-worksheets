@@ -22,7 +22,7 @@ object Actor_6_2 {
     def apply(percent: Int) = {
       val randomNumber = randomGenerator.nextInt(100)
       if (randomNumber < percent) {
-        throw new Exception("Listener failure")
+        throw new Exception("Rando Exception failure")
       }
     }
   }

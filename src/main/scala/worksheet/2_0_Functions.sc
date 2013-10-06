@@ -6,12 +6,12 @@ object _2_0_Functions {
   *   - The use of '_' represents Scala's wildcard to mean 'everything'
   */
   def fib(n: Int): Int = n match {
-  case 0|1 => n
-  case _ => fib(n - 1) + fib(n - 2)
+    case 0|1 => n
+    case _ => fib(n - 1) + fib(n - 2)
   }
 
-  //fib(3)
-  //fib(10)
+  fib(3)
+  fib(10)
 
 
   /*
@@ -21,18 +21,19 @@ object _2_0_Functions {
   *       () => Int
   */
   def fibGenerator(): () => Int = {
-  var a: Int = 0
-  var b: Int = 1
+    var a: Int = 0
+    var b: Int = 1
 
-  () => {
-    val res = a + b
-    a = b
-    b = res
-    res
+    () => {
+      val res = a + b
+      a = b
+      b = res
+      res
+    }
   }
-  }
-  //val fib = fibGenerator
-  //for (i <- 1 to 10) { println(fib()) }
+  val fib = fibGenerator
+  for (i <- 1 to 10) { println(fib()) }
+
 
 
   /*
@@ -41,11 +42,12 @@ object _2_0_Functions {
   *   - '=>' operator in parameter list means pass by name
   */
   def log(msg: => String, doLog: Boolean) = {
-  if (doLog) {
-    println(msg)
-  }
+    if (doLog) {
+      println(msg)
+    }
   }
 
-  val doLog = true
+  val doLog = false
   log("some stuff" + (1 / 0), doLog)
+
 }

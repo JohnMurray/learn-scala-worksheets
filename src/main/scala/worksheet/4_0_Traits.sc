@@ -27,5 +27,6 @@ object _4_0_Traits {
   println("For each: "); list.foreach(x => println(x))
 
 
+
   println("Json: " + list.toJson())
 }

@@ -3,25 +3,19 @@ object _3_5_Classes {
    * A few things to notice:
    *   - Companion object acts as a static-method container
    */
-  object _3_5_Classes {
-
-    class Car(make: String, model: String) {
-      override def toString = "%s %s".format(make, model)
-    }
-
-    object Car {
-      def getMakes = List("Honda", "Ford", "Chevy")
-      def getModels = Map[String, List[String]](
-        "Honda" -> List("Accord", "ZEST", "Fit"),
-        "Ford"  -> List("F-150", "Taurus", "Marauder"),
-        "Chevy" -> List("Volt", "Celta", "Impala")
-      )
-    }
-
+  class Car(make: String, model: String) {
+    override def toString = "%s %s".format(make, model)
   }
 
+  object Car {
+    def getMakes = List("Honda", "Ford", "Chevy")
+    def getModels = Map[String, List[String]](
+      "Honda" -> List("Accord", "ZEST", "Fit"),
+      "Ford"  -> List("F-150", "Taurus", "Marauder"),
+      "Chevy" -> List("Volt", "Celta", "Impala")
+    )
+  }
 
-  import _3_5_Classes._
 
   val allCars: List[Car] = Car.getMakes.map(make => {
     Car.getModels(make).map(model => {
@@ -31,4 +25,5 @@ object _3_5_Classes {
 
 
   allCars.map(println)
+
 }

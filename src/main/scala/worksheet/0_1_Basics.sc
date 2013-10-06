@@ -6,7 +6,7 @@ object _0_1_Basics {
   val bigListOfNothing : List[Nothing] = List()
 
   // checkout implementation
-  // scala.collection.immutable.Nil
+  scala.collection.immutable.Nil
 
   def doNothing() : Unit = { }
 
@@ -18,6 +18,7 @@ object _0_1_Basics {
    */
   def maybeReturnInteger(): Option[Int] = {
     val randomNumber = new scala.util.Random().nextInt(100)
+
     if (randomNumber < 50) {
       Some(randomNumber)
     }
@@ -31,6 +32,5 @@ object _0_1_Basics {
       case None => println("nothing")
     }
   }
-
 
 }

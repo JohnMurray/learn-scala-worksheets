@@ -13,6 +13,7 @@ object _1_1_PatternMatching {
         doWithList(xs)
       }
       case Nil =>
+      case _ =>
     }
   }
   doWithList(myList)

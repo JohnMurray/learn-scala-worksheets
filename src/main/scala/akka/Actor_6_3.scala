@@ -1,4 +1,4 @@
-import akka.actor.{Props, ActorSystem, ActorSelection, Actor}
+import akka.actor.{Props, ActorSystem, Actor}
 
 /*
  * A few things to notice:

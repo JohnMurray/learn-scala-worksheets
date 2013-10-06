@@ -14,7 +14,7 @@ object Future_5_1 {
   def main(args: Array[String]) {
     val d = 1 second
 
-    // method 1
+    // example 1 - for statements
     val fgSum =
       for {
         a <- future(someLengthyComputation) map f
@@ -22,14 +22,16 @@ object Future_5_1 {
       } yield (a + b)
     println(result(fgSum, d))
 
-    // method 2
+
+    // example 2 - collect with result
     val alt = List(
       someLengthyComputation _ -> f _,
       anotherLengthyComputation _ -> g _)
     val all = Future.traverse(alt)(p => future(p._1()) map p._2)
     println(result(all, d).foldLeft(0)(_ + _))
 
-    // method 3
+
+    // example 3
     val altf = List(
       future(someLengthyComputation) map f,
       future(anotherLengthyComputation) map g
