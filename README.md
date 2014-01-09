@@ -4,14 +4,22 @@ This project contains some worksheets to walk you through the introductory
 principles in Scala. The worksheets were written using the facilities available
 within IntelliJ, but they should work just as well with eclipse.
 
+## General Setup
+
++ Ensure that you have Java avaialble on your machine (`java -version`). Version 1.7 is preferred, but 1.6 will work as well. If you would like to upgrade to 1.7, you can download it from Oracle [here][2].
++ Install SBT
+  + SBT (Scala Build Tool) is very easily installed with `brew`. If you do not have [brew][3] installed, I recommend you do or install SBT [manually][4].
+  + `brew install sbt`
+  + Already installed?  `brew upgrade sbt`
+
 ## Setup with IntelliJ
 
 + [Download IntelliJ][1] if needed (version 13 Community Edition recommended)
 + Install `scala` plugin (Preferences -> Plugins -> Browse Repositories -> install `Scala`)
-+ Install `SBT support`
++ Install Scala & SBT support
   + Add Repository: (Preferences -> Plugins -> Browse Repositories -> Manage Repositories)
-    + `http://download.jetbrains.com/scala/sbt-nightly-leda.xml`
-  + Install Plugin: (Preferences -> Plugins -> Browse Repositories -> install `sbt-intellij-bin`)
+    + `http://www.jetbrains.com/idea/plugins/scala-nightly-cardea.xml`
+  + Install Plugin: (Preferences -> Plugins -> Browse Repositories -> install `scala-intellij-bin`)
 + `git clone git://github.com/JohnMurray/learn-scala-worksheets.git $CHECKOUT_DIR`
 + Import Project from `$CHECKOUT_DIR`
 + Select `Import from External Model` and `SBT project` as your import options
@@ -68,3 +76,6 @@ see that files have changed and re-compile when you type `run`.
 
 
   [1]: http://www.jetbrains.com/idea/free_java_ide.html
+  [2]: http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html
+  [3]: http://brew.sh/
+  [4]: http://www.scala-sbt.org/release/docs/Getting-Started/Setup.html
