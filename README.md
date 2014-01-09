@@ -6,7 +6,7 @@ within IntelliJ, but they should work just as well with eclipse.
 
 ## Setup with IntelliJ
 
-+ [Download IntelliJ][1] (if needed)
++ [Download IntelliJ][1] if needed (version 13 Community Edition recommended)
 + Install `scala` plugin (Preferences -> Plugins -> Browse Repositories -> install `Scala`)
 + Install `SBT support`
   + Add Repository: (Preferences -> Plugins -> Browse Repositories -> Manage Repositories)
